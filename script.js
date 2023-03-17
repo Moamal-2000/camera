@@ -10,7 +10,6 @@ const emoji = document.querySelector('.emoji')
 
 
 let isFlashActive = false
-const emojis = ['🤣', '🤨', '😍', '🥵', '🤮', '🫣', '🫢', '🥳', '🤡']
 
 
 
@@ -20,8 +19,8 @@ const emojis = ['🤣', '🤨', '😍', '🥵', '🤮', '🫣', '🫢', '🥳', 
 
 
 function randomEmoji() {
-  const randomEmoji = Math.floor(Math.random() * emojis.length)
-  emoji.textContent = emojis[randomEmoji]
+  const randomEmoji = Math.floor((Math.random() * 9) + 1)
+  emoji.src = `emojis/emoji${randomEmoji}.png`
   emoji.style.display = 'block'
 }
 

@@ -277,19 +277,14 @@ main .container {
   -o-transition: top 0.1s;
 }
 
-.camera-body .camera-button span {
+.camera-body .hand-emoji {
   position: absolute;
-  left: 50%;
-  top: -44px;
+  left: 86px;
+  top: -50px;
   color: #252525;
   display: block;
   font-size: 26px;
   letter-spacing: -0.5px;
-  transform: translateX(-50%);
-  -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
   animation: hide-after-time 0.3s 4s forwards;
   -webkit-animation: hide-after-time 0.3s 4s forwards;
 }
@@ -307,9 +302,10 @@ main .container {
 }
 
 @media (max-width: 768px) {
-  .camera-body .camera-button span {
-    font-size: 30px;
-    top: -54px;
+  .camera-body .hand-emoji {
+    font-size: 34px;
+    top: -60px;
+    left: 80px;
   }
 
   .camera-body .msg {
@@ -334,16 +330,20 @@ main .container {
 
 .emoji {
   position: absolute;
-  left: 0;
-  top: 0;
-  width: fit-content;
-  height: fit-content;
-  font-size: 80px;
+  left: 30px;
+  top: 30px;
+  width: 100px;
+  height: 100px;
   display: none;
 }
 
 @media (max-width: 768px) {
-  .emoji {font-size: 60px;}
+  .emoji {
+    width: 70px;
+    height: 70px;
+    left: 20px;
+    top: 20px;
+  }
 }
 
 /* Camera styles [End] */
@@ -359,6 +359,7 @@ main .container {
   from {
     opacity: 1;
   }
+
   to {
     opacity: 0;
   }
