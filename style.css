@@ -356,19 +356,12 @@ main .container {
 /* Keyframes [Start] */
 
 @keyframes flash {
-  from {
-    opacity: 1;
-  }
-
-  to {
-    opacity: 0;
-  }
+  from {opacity: 1;}
+  to {opacity: 0;}
 }
 
 @keyframes hide-after-time {
-  to {
-    visibility: hidden;
-  }
+  to {visibility: hidden;}
 }
 
 /* Keyframes [End] */
