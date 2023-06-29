@@ -11,3 +11,11 @@
   -ms-transition: $property $duration $delay;
   -o-transition: $property $duration $delay;
 }
+
+@mixin prefix($property, $value) {
+  -webkit-#{$property}: $value;
+  -moz-#{$property}: $value;
+  -o-#{$property}: $value;
+  -ms-#{$property}: $value;
+  $property: $value;
+}

@@ -55,11 +55,7 @@ main .container {
   background-color: #fff;
   width: 530px;
   height: 330px;
-  border-radius: 50px;
-  -webkit-border-radius: 50px;
-  -moz-border-radius: 50px;
-  -ms-border-radius: 50px;
-  -o-border-radius: 50px;
+  @include prefix(border-radius, 50px);
   box-shadow: 13px 13px 0 #aadff7;
   position: relative;
 }
@@ -85,11 +81,7 @@ main .container {
   width: 20px;
   aspect-ratio: 1/1;
   background-color: #242f3c;
-  border-radius: 50%;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
+  @include prefix(border-radius, 50%);
 }
 
 .camera-body .camera-lens {
@@ -102,11 +94,7 @@ main .container {
   width: 240px;
   aspect-ratio: 1/1;
   @include center-x-y;
-  border-radius: 50%;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
+  @include prefix(border-radius, 50%);
   z-index: 2;
 }
 
@@ -115,11 +103,7 @@ main .container {
   top: 0;
   width: 0;
   translate: -50% 0;
-  border-radius: inherit;
-  -webkit-border-radius: inherit;
-  -moz-border-radius: inherit;
-  -ms-border-radius: inherit;
-  -o-border-radius: inherit;
+  @include prefix(border-radius, inherit);
   z-index: 1;
   border: solid 112px red;
   border-color: #adb7c16f #242f3c6f #242f3c6f #adb7c16f;
@@ -130,11 +114,7 @@ main .container {
   border: solid 12px #41546a;
   width: 78%;
   height: 78%;
-  border-radius: inherit;
-  -webkit-border-radius: inherit;
-  -moz-border-radius: inherit;
-  -ms-border-radius: inherit;
-  -o-border-radius: inherit;
+  @include prefix(border-radius, inherit);
   @include center-x-y;
 }
 
@@ -142,11 +122,7 @@ main .container {
   background-color: #242f3c;
   width: 60%;
   height: 60%;
-  border-radius: inherit;
-  -webkit-border-radius: inherit;
-  -moz-border-radius: inherit;
-  -ms-border-radius: inherit;
-  -o-border-radius: inherit;
+  @include prefix(border-radius, inherit);
   position: relative;
 }
 
@@ -156,11 +132,7 @@ main .container {
   width: 24px;
   aspect-ratio: 1/1;
   background-color: #454e59;
-  border-radius: inherit;
-  -webkit-border-radius: inherit;
-  -moz-border-radius: inherit;
-  -ms-border-radius: inherit;
-  -o-border-radius: inherit;
+  @include prefix(border-radius, inherit);
 }
 
 .camera-body .colored-label {
@@ -194,12 +166,8 @@ main .container {
   translate: -50% 0;
   left: 50%;
   top: 0;
-  border-radius: 8px 8px 0 0;
-  -webkit-border-radius: 8px 8px 0 0;
-  -moz-border-radius: 8px 8px 0 0;
-  -ms-border-radius: 8px 8px 0 0;
-  -o-border-radius: 8px 8px 0 0;
   z-index: -1;
+  @include prefix(border-radius, 8px 8px 0 0);
   @include transition(top, 0.3s)
 }
 
@@ -214,11 +182,7 @@ main .container {
   height: 76%;
   translate: -50% -50%;
   background-color: #7c96b1;
-  border-radius: 10px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
+  @include prefix(border-radius, 10px);
 }
 
 .camera-body .camera-button {
@@ -228,12 +192,8 @@ main .container {
   background-color: #bb354d;
   width: 50px;
   height: 6px;
-  border-radius: 20px 20px 0 0;
-  -webkit-border-radius: 20px 20px 0 0;
-  -moz-border-radius: 20px 20px 0 0;
-  -ms-border-radius: 20px 20px 0 0;
-  -o-border-radius: 20px 20px 0 0;
   cursor: pointer;
+  @include prefix(border-radius, 20px 20px 0 0);
   @include transition(top, 0.1s);
 }
 
@@ -245,8 +205,7 @@ main .container {
   display: block;
   font-size: 26px;
   letter-spacing: -0.5px;
-  animation: hide-after-time 0.3s 4s forwards;
-  -webkit-animation: hide-after-time 0.3s 4s forwards;
+  @include prefix(animation, hide-after-time 0.3s 4s forwards);
 }
 
 .camera-body .msg {
@@ -257,8 +216,7 @@ main .container {
   color: #252525;
   font-size: 20px;
   letter-spacing: -0.5px;
-  animation: hide-after-time 0.3s 4s forwards;
-  -webkit-animation: hide-after-time 0.3s 4s forwards;
+  @include prefix(animation, hide-after-time 0.3s 4s forwards);
 }
 
 @media (max-width: 768px) {
@@ -284,8 +242,7 @@ main .container {
   background-color: #fff;
   z-index: 1000;
   display: none;
-  animation: flash 0.5s 0.1s linear;
-  -webkit-animation: flash 0.5s 0.1s linear;
+  @include prefix(animation, flash 0.5s 0.1s linear);
 }
 
 .emoji {
